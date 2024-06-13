@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.background-image {
+    background-image: url('../public/backgrounds/fundo_home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.text-container {
+    text-align: center;
+    font-size: 2.5em;
+    /* Tamanho da fonte */
+    padding-top: 100px;
+    /* Espaçamento após a logo */
+}

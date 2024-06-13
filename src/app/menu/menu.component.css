@@ -1,0 +1,72 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    background-color: rgba(28, 28, 28, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(122, 122, 122, 0.2);
+    color: #fff;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-brand {
+    padding: 0
+}
+
+.navbar-brand img {
+    margin-left: 40px;
+}
+
+.navbar-expand-lg {
+    padding: 1px 5px;
+}
+
+.nav-link {
+    color: #fff;
+    transition: color 0.1s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.1s ease-in-out;
+    border-radius: 5px;
+    padding: 1px 5px;
+    margin: 0px 5px;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: black;
+    border-radius: 5px;
+    z-index: -1;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-nav .nav-item .nav-link:hover::before,
+.navbar-nav .nav-item .nav-link:focus::before {
+    width: 200%;
+    height: 200%;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link:focus {
+    color: #fff;
+}
