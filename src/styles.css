@@ -1,4 +1,10 @@
-body, html {
+@font-face {
+    font-family: 'Cash Display Bold';
+    src: url('./assets/fonts/clashdisplay/ClashDisplay-Semibold.otf');
+}
+
+body,
+html {
     padding: 0;
     margin: 0;
 }

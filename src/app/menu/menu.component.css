@@ -8,21 +8,24 @@
     color: #fff;
 }
 
+.navbar-expand-lg {
+    padding: 3px 5px;
+}
+
 .navbar-toggler:focus {
     outline: none;
     box-shadow: none;
 }
 
 .navbar-brand {
-    padding: 0
+    padding: 0;
 }
 
 .navbar-brand img {
+    position: fixed;
+    left: 0;
+    top: 0;
     margin-left: 40px;
-}
-
-.navbar-expand-lg {
-    padding: 1px 5px;
 }
 
 .nav-link {
@@ -69,4 +72,38 @@
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .nav-link:focus {
     color: #fff;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav .nav-item {
+        margin-left: 30px;
+    }
+
+    .navbar-nav .nav-item .nav-link,
+    .navbar-nav .nav-item .nav-link::before,
+    .navbar-nav .nav-item .nav-link:hover::before,
+    .navbar-nav .nav-item .nav-link:focus::before {
+        transition: none;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        color: #fff;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover,
+    .navbar-nav .nav-item .nav-link:focus,
+    .navbar-nav .nav-item .nav-link::before {
+        color: #dcdcdc;
+        background-color: transparent;
+    }
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
 }
