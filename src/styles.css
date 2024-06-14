@@ -9,6 +9,11 @@ html {
     margin: 0;
 }
 
+h1 {
+    padding: 5px !important;
+    margin: 0 !important;
+}
+
 .background-image {
     background-image: url('../public/backgrounds/fundo_home.png');
     background-position: center;
@@ -17,7 +22,6 @@ html {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     color: rgb(0, 0, 0);
 }
@@ -25,7 +29,11 @@ html {
 .text-container {
     text-align: center;
     font-size: 2.5em;
-    /* Tamanho da fonte */
     padding-top: 100px;
-    /* Espaçamento após a logo */
+}
+
+.logo-center {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 15px;
 }
