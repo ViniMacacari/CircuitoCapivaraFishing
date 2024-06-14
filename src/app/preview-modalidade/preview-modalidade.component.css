@@ -7,3 +7,9 @@
     font-family: 'Cash Display Bold';
     font-size: 55px;
 }
+
+@media (max-width: 992px) {
+    .text-container {
+        font-size: 35px;
+    }
+}
