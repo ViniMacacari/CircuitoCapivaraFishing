@@ -1,0 +1,17 @@
+h1 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.custom-padding {
+    padding: 6rem 30% !important;
+}
+
+@media (max-width: 1024px) {
+    .custom-padding {
+        padding: 6rem 5% !important;
+    }
+}
