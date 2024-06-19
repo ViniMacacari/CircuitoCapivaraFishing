@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MenuComponent } from './menu/menu.component';
-import { PreviewModalidadeComponent } from './preview-modalidade/preview-modalidade.component'
+import { MenuComponent } from './componentes/menu/menu.component';
+import { PreviewModalidadeComponent } from './componentes/preview-modalidade/preview-modalidade.component';
 
 @Component({
   selector: 'app-root',
