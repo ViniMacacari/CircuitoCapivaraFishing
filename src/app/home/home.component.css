@@ -12,6 +12,6 @@ p {
 
 @media (max-width: 1024px) {
     .custom-padding {
-        padding: 6rem 5% !important;
+        padding: 3rem 5% !important;
     }
 }
