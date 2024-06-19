@@ -30,6 +30,14 @@ h1 {
     font-family: 'Cash Display Bold';
 }
 
+.mintitle-ccf {
+    font-size: 15px;
+}
+
+.minsubtitle-ccf {
+    font-size: 13px !important;
+}
+
 .text-container {
     text-align: center;
     font-size: 2.5em;
@@ -40,4 +48,21 @@ h1 {
     width: 125px;
     height: 125px;
     margin-bottom: 15px;
+}
+
+.pv0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 992px) {
+    .mintitle-ccf {
+        font-size: 10px;
+    }
+    
+    .minsubtitle-ccf {
+        font-size: 8px !important;
+    }
 }

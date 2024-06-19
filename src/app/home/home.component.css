@@ -1,5 +1,7 @@
 h1 {
     font-size: 1.75rem;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -7,11 +9,23 @@ p {
 }
 
 .custom-padding {
-    padding: 6rem 30% !important;
+    padding: 6rem 25% 2rem 25% !important;
 }
 
-@media (max-width: 1024px) {
+.custom-padding-h {
+    padding: 0 25% !important;
+}
+
+@media (max-width: 992px) {
     .custom-padding {
-        padding: 3rem 5% !important;
+        padding: 3rem 5% 1rem 5% !important;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: .9rem;
     }
 }
