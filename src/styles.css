@@ -3,6 +3,11 @@
     src: url('./assets/fonts/clashdisplay/ClashDisplay-Semibold.otf');
 }
 
+@font-face {
+    font-family: 'Inter Medium';
+    src: url('./assets/fonts/intertight/InterTight-Medium.ttf');
+}
+
 body,
 html {
     padding: 0;
@@ -47,6 +52,26 @@ h1 {
     text-align: center;
     font-size: 2.5em;
     padding-top: 100px;
+}
+
+label {
+    font-family: 'Inter Medium';
+}
+
+.input-ccf {
+    font-family: 'Inter Medium';
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ebebeb;
+    color: rgb(0, 0, 0);
+    width: 300px;
+}
+
+.input-max {
+    width: 100% !important;
+    min-width: 250px;
 }
 
 .logo-center {
