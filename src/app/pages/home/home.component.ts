@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PreviewModalidadeComponent } from '../componentes/preview-modalidade/preview-modalidade.component';
+import { PreviewModalidadeComponent } from '../../componentes/preview-modalidade/preview-modalidade.component';
 
 @Component({
   selector: 'app-home',
