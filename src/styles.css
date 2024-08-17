@@ -35,9 +35,14 @@ h1 {
     font-family: 'Cash Display Bold';
 }
 
-.subtitle-ccf {
+.subtitle-ccf,
+.subtitle-min-ccf {
     font-family: 'Cash Display Bold';
     font-size: 25px;
+}
+
+.subtitle-min-ccf {
+    font-size: 18px;
 }
 
 .mintitle-ccf {
@@ -55,8 +60,6 @@ h1 {
 }
 
 label {
-    width: 235px;
-    min-width: 235px;
     font-family: 'Inter Medium';
 }
 
@@ -69,6 +72,69 @@ label {
     background-color: #ebebeb;
     color: rgb(0, 0, 0);
     max-width: 300px;
+}
+
+.input-max {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+.label-check {
+    text-align: center;
+}
+
+.input-check {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.input-check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.input-check input[type="checkbox"]:checked + .checkmark {
+    background-color: #4CAF50;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.input-check input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+}
+
+.input-check .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.input-check:hover .checkmark {
+    background-color: #aaa;
 }
 
 .logo-center {
@@ -88,7 +154,7 @@ label {
     .mintitle-ccf {
         font-size: 10px;
     }
-    
+
     .minsubtitle-ccf {
         font-size: 8px !important;
     }

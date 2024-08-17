@@ -6,6 +6,7 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 4px rgba(122, 122, 122, 0.2);
     color: #fff;
+    z-index: 10000;
 }
 
 .navbar-expand-lg {
