@@ -15,7 +15,7 @@ h1 {
 }
 
 .background-image {
-    background-image: url('../public/backgrounds/fundo_home.png');
+    background-image: url('/assets/backgrounds/fundo_home.png');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,6 +28,11 @@ h1 {
 
 .title-ccf {
     font-family: 'Cash Display Bold';
+}
+
+.subtitle-ccf {
+    font-family: 'Cash Display Bold';
+    font-size: 25px;
 }
 
 .mintitle-ccf {
