@@ -137,6 +137,16 @@ label {
     background-color: #aaa;
 }
 
+.btn-form {
+    font-family: 'Inter Medium';
+    outline: none;
+    border: solid black 2px;
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(90deg, #E0A347 0%, #FFD99F 48%, #ECA63D 69%, #C89E60 100%);
+    color: rgb(0, 0, 0);
+}
+
 .logo-center {
     width: 125px;
     height: 125px;
