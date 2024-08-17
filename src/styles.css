@@ -55,6 +55,8 @@ h1 {
 }
 
 label {
+    width: 235px;
+    min-width: 235px;
     font-family: 'Inter Medium';
 }
 
@@ -66,12 +68,7 @@ label {
     padding: 10px;
     background-color: #ebebeb;
     color: rgb(0, 0, 0);
-    width: 300px;
-}
-
-.input-max {
-    width: 100% !important;
-    min-width: 250px;
+    max-width: 300px;
 }
 
 .logo-center {
