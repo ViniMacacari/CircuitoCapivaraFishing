@@ -5,5 +5,6 @@ import { InscricaoBarcosComponent } from './pages/inscricao/inscricao-barcos/ins
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'}, 
     {path: 'home', component: HomeComponent},
-    {path: 'inscricao/barcos', component: InscricaoBarcosComponent}
+    {path: 'inscricao/barcos', component: InscricaoBarcosComponent},
+    {path: '**', redirectTo: 'home'}
 ]
