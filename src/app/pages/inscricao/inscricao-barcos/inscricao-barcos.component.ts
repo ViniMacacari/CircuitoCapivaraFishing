@@ -12,6 +12,10 @@ export class InscricaoBarcosComponent {
   @ViewChild('Modal') Modal!: ModalComponent
 
   openModal() {
-    this.Modal.openModal('#f6f6f6', 'Inscricão de Pescadores', 'teste', 'fa-download', true, 'inscricao-barcos', 'Sim', true)
+    this.Modal.openModal('#ffd042', 'Confirmação', 'Deseja realizar a inscrição da sua equipe com os dados selecionados?', 'fa-download', true, 'Sim', true, '', 'sim', 'nao')
+  }
+
+  modalFechado() {
+    console.log('eu fechei o modal')
   }
 }

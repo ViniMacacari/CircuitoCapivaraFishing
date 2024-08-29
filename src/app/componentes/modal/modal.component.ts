@@ -1,6 +1,7 @@
-import { Component, Input, OnDestroy } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { Router } from '@angular/router'
+import { ModalResponseService } from '../../services/modal/modal-response.service'
 
 @Component({
   selector: 'app-modal',
@@ -10,19 +11,25 @@ import { Router } from '@angular/router'
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private responseService: ModalResponseService
+  ) { }
 
   @Input() backgroundColor: string = '#f6f6f6'
   @Input() title: string = ''
   @Input() content: string = ''
+  @Output() modalClosed: EventEmitter<void> = new EventEmitter<void>()
   isOpen = false
   canClose = true
   button2 = false
   icon = 'fa-download'
   redirectRoute: string | null = null
   messageButton: string = 'Fechar'
+  resposta1: string = ''
+  resposta2: string = ''
 
-  openModal(backgroundColor: string, title: string, content: string, icone: string, canCloseB: boolean, redirectRoute: string | null = null, messageButton: string | null = null, button2: boolean = false) {
+  openModal(backgroundColor: string, title: string, content: string, icone: string, canCloseB: boolean, messageButton: string | null = null, button2: boolean = false, redirectRoute: string | null = null, resposta1: string = '', resposta2: string = '') {
     this.backgroundColor = backgroundColor
     this.title = title
     this.content = content
@@ -32,6 +39,8 @@ export class ModalComponent {
     this.redirectRoute = redirectRoute
     this.messageButton = messageButton || 'Fechar'
     this.button2 = button2
+    this.resposta1 = resposta1
+    this.resposta2 = resposta2
 
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
@@ -52,5 +61,14 @@ export class ModalComponent {
     document.body.style.position = ''
     document.body.style.width = ''
     document.body.style.height = ''
+    this.modalClosed.emit()
+  }
+
+  respostaModal1(resposta: string) {
+    this.responseService.setResposta(resposta)
+  }
+
+  respostaModal2(resposta: string) {
+    this.responseService.setResposta(resposta)
   }
 }
