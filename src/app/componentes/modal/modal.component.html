@@ -13,6 +13,6 @@
             <p id="info-modal" [innerHTML]="content"></p>
         </div>
         <button class="close-btn" (click)="closeModal()" *ngIf="canClose">{{messageButton}}</button>
-        <button class="close-btn" (click)="closeModal()" *ngIf="!canClose">Cancelar</button>
+        <button class="close-btn" (click)="closeModal()" *ngIf="button2">Cancelar</button>
     </div>
 </div>

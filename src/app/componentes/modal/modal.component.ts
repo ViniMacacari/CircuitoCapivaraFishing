@@ -9,7 +9,7 @@ import { Router } from '@angular/router'
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnDestroy {
+export class ModalComponent {
   constructor(private router: Router) { }
 
   @Input() backgroundColor: string = '#f6f6f6'
@@ -17,11 +17,12 @@ export class ModalComponent implements OnDestroy {
   @Input() content: string = ''
   isOpen = false
   canClose = true
+  button2 = false
   icon = 'fa-download'
   redirectRoute: string | null = null
   messageButton: string = 'Fechar'
 
-  openModal(backgroundColor: string, title: string, content: string, icone: string, canCloseB: boolean, redirectRoute: string | null = null, messageButton: string | null = null) {
+  openModal(backgroundColor: string, title: string, content: string, icone: string, canCloseB: boolean, redirectRoute: string | null = null, messageButton: string | null = null, button2: boolean = false) {
     this.backgroundColor = backgroundColor
     this.title = title
     this.content = content
@@ -30,6 +31,7 @@ export class ModalComponent implements OnDestroy {
     this.icon = icone || 'fa-download'
     this.redirectRoute = redirectRoute
     this.messageButton = messageButton || 'Fechar'
+    this.button2 = button2
 
     window.scrollTo({ top: 0, behavior: 'smooth' })
 
@@ -37,10 +39,6 @@ export class ModalComponent implements OnDestroy {
     document.body.style.position = 'fixed'
     document.body.style.width = '100%'
     document.body.style.height = '100%'
-
-    document.addEventListener('wheel', this.preventDefault, { passive: false })
-    document.addEventListener('touchmove', this.preventDefault, { passive: false })
-    document.addEventListener('keydown', this.preventDefaultForScrollKeys, { passive: false })
   }
 
   closeModal() {
@@ -54,25 +52,5 @@ export class ModalComponent implements OnDestroy {
     document.body.style.position = ''
     document.body.style.width = ''
     document.body.style.height = ''
-
-    document.removeEventListener('wheel', this.preventDefault)
-    document.removeEventListener('touchmove', this.preventDefault)
-    document.addEventListener('keydown', this.preventDefaultForScrollKeys, { passive: false })
-  }
-
-  ngOnDestroy() {
-    document.removeEventListener('wheel', this.preventDefault)
-    document.removeEventListener('touchmove', this.preventDefault)
-    document.removeEventListener('keydown', this.preventDefaultForScrollKeys)
-  }
-
-  preventDefault(e: Event) {
-    // e.preventDefault()
-  }
-
-  preventDefaultForScrollKeys(e: KeyboardEvent) {
-    // if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "PageUp", "PageDown", "Home", "End", " "].includes(e.key)) {
-    //   e.preventDefault()
-    // }
   }
 }
