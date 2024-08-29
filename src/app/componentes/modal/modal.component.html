@@ -1,0 +1,18 @@
+<div class="overlay" *ngIf="isOpen" [ngClass]="{'aberto': isOpen}"></div>
+<div class="popup" [ngClass]="{'aberto': isOpen}">
+    <div class="head" [ngStyle]="{'background-color': backgroundColor}">
+        <div class="icon">
+            <div class="box">
+                <i class="fa-solid" [ngClass]="icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <h1 id="titulo-modal">{{ title }}</h1>
+        <div class="scroll">
+            <p id="info-modal" [innerHTML]="content"></p>
+        </div>
+        <button class="close-btn" (click)="closeModal()" *ngIf="canClose">{{messageButton}}</button>
+        <button class="close-btn" (click)="closeModal()" *ngIf="!canClose">Cancelar</button>
+    </div>
+</div>
