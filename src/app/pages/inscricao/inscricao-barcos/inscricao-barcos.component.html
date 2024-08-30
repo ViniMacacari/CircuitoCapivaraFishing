@@ -10,41 +10,45 @@
             <h3 class="subtitle-min-ccf px-3">Informações Equipe</h3>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Nome da Equipe</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Minha equipe">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Minha equipe" [(ngModel)]="nomeEquipe">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">E-mail de contato</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="meuemail@email.com">
+                <input type="text" class="input-ccf input-max px-3" placeholder="meuemail@email.com"
+                    [(ngModel)]="emailContato">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Número da Arrais</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="12345ABC...">
+                <input type="text" class="input-ccf input-max px-3" placeholder="12345ABC..."
+                    [(ngModel)]="numeroArrais">
             </div>
             <div class="d-flex w-100 align-items-center">
                 <label class="input-check my-2 px-2">
                     Barco alugado?
-                    <input type="checkbox">
+                    <input type="checkbox" [(ngModel)]="barcoAlugado">
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Nome da embarcação</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Meu barco">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Meu barco"
+                    [(ngModel)]="nomeEmbarcacao">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Capitania</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="São Paulo (SP)">
+                <input type="text" class="input-ccf input-max px-3" placeholder="São Paulo (SP)"
+                    [(ngModel)]="capitania">
             </div>
             <div class="d-flex w-100 align-items-center">
                 <label class="input-check my-2 px-2">
                     Motorização alugada?
-                    <input type="checkbox">
+                    <input type="checkbox" [(ngModel)]="motorizacaoAlugada">
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Motorização</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Motor 50HP">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Motor 50HP" [(ngModel)]="motorizacao">
             </div>
         </div>
 
@@ -52,19 +56,23 @@
             <h3 class="subtitle-min-ccf px-3">Capitão</h3>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Nome completo do capitão</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Fulano da Silva">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Fulano da Silva"
+                    [(ngModel)]="nomeCapitao">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">CPF do capitão</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="XXX.XXX.XXX-XX">
+                <input type="text" class="input-ccf input-max px-3" placeholder="XXX.XXX.XXX-XX"
+                    [(ngModel)]="cpfCapitao">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Celular do capitão</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="(43) 99999-9999">
+                <input type="text" class="input-ccf input-max px-3" placeholder="(43) 99999-9999"
+                    [(ngModel)]="celularCapitao">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Cidade do capitão</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Primeiro de Maio">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Primeiro de Maio"
+                    [(ngModel)]="cidadeCapitao">
             </div>
         </div>
 
@@ -72,19 +80,23 @@
             <h3 class="subtitle-min-ccf px-3">2º Pescador</h3>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Nome completo do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Fulano da Silva">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Fulano da Silva"
+                    [(ngModel)]="nomePescador2">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">CPF do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="XXX.XXX.XXX-XX">
+                <input type="text" class="input-ccf input-max px-3" placeholder="XXX.XXX.XXX-XX"
+                    [(ngModel)]="cpfPescador2">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Celular do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="(43) 99999-9999">
+                <input type="text" class="input-ccf input-max px-3" placeholder="(43) 99999-9999"
+                    [(ngModel)]="celularPescador2">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Cidade do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Primeiro de Maio">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Primeiro de Maio"
+                    [(ngModel)]="cidadePescador2">
             </div>
         </div>
 
@@ -92,19 +104,23 @@
             <h3 class="subtitle-min-ccf px-3">3º Pescador</h3>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Nome completo do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Fulano da Silva">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Fulano da Silva"
+                    [(ngModel)]="nomePescador3">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">CPF do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="XXX.XXX.XXX-XX">
+                <input type="text" class="input-ccf input-max px-3" placeholder="XXX.XXX.XXX-XX"
+                    [(ngModel)]="cpfPescador3">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Celular do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="(43) 99999-9999">
+                <input type="text" class="input-ccf input-max px-3" placeholder="(43) 99999-9999"
+                    [(ngModel)]="celularPescador3">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Cidade do pescador</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Primeiro de Maio">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Primeiro de Maio"
+                    [(ngModel)]="cidadePescador3">
             </div>
         </div>
 
