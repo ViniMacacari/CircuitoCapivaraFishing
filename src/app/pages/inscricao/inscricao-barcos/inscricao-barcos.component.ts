@@ -4,6 +4,7 @@ import { ModalComponent } from '../../../componentes/modal/modal.component'
 import { ModalResponseService } from '../../../services/modal/modal-response.service'
 import { VariaveisAmbiente } from '../../../config/ambiente'
 import { HttpClient, HttpClientModule } from '@angular/common/http'
+import { FormatadoresService } from '../../../services/formatadores/formatadores.service'
 
 @Component({
   selector: 'app-inscricao-barcos',
@@ -40,7 +41,8 @@ export class InscricaoBarcosComponent {
 
   constructor(
     private http: HttpClient,
-    private responseService: ModalResponseService
+    private responseService: ModalResponseService,
+    public formatadores: FormatadoresService
   ) {
 
   }
