@@ -5,11 +5,12 @@ import { ModalResponseService } from '../../../services/modal/modal-response.ser
 import { VariaveisAmbiente } from '../../../config/ambiente'
 import { HttpClient, HttpClientModule } from '@angular/common/http'
 import { FormatadoresService } from '../../../services/formatadores/formatadores.service'
+import { FormatInputDirective } from '../../../directives/format-input.directive'
 
 @Component({
   selector: 'app-inscricao-barcos',
   standalone: true,
-  imports: [ModalComponent, FormsModule, HttpClientModule],
+  imports: [ModalComponent, FormsModule, HttpClientModule, FormatInputDirective],
   templateUrl: './inscricao-barcos.component.html',
   styleUrl: './inscricao-barcos.component.css'
 })
