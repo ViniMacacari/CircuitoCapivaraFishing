@@ -23,28 +23,28 @@
             <div class="d-flex w-100 align-items-center">
                 <label class="input-check my-2 px-2">
                     Barco alugado?
-                    <input type="checkbox" [(ngModel)]="barcoAlugado">
+                    <input type="checkbox" [(ngModel)]="barcoAlugado" (change)="onBarcoAlugadoChange()">
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Nome da embarcação</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Meu barco" [(ngModel)]="nomeEmbarcacao">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Meu barco" [(ngModel)]="nomeEmbarcacao" [disabled]="barcoAlugado">
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Capitania</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="São Paulo (SP)" [(ngModel)]="capitania">
+                <input type="text" class="input-ccf input-max px-3" placeholder="São Paulo (SP)" [(ngModel)]="capitania" [disabled]="barcoAlugado">
             </div>
             <div class="d-flex w-100 align-items-center">
                 <label class="input-check my-2 px-2">
                     Motorização alugada?
-                    <input type="checkbox" [(ngModel)]="motorizacaoAlugada">
+                    <input type="checkbox" [(ngModel)]="motorizacaoAlugada" (change)="onMotorizacaoAlugadaChange()">
                     <span class="checkmark"></span>
                 </label>
             </div>
             <div class="d-flex w-100 align-items-center flex-column">
                 <label class="px-3 input-max">Motorização</label>
-                <input type="text" class="input-ccf input-max px-3" placeholder="Motor 50HP" [(ngModel)]="motorizacao">
+                <input type="text" class="input-ccf input-max px-3" placeholder="Motor 50HP" [(ngModel)]="motorizacao" [disabled]="motorizacaoAlugada">
             </div>
         </div>
 

@@ -4,7 +4,6 @@ import { ModalComponent } from '../../../componentes/modal/modal.component'
 import { ModalResponseService } from '../../../services/modal/modal-response.service'
 import { VariaveisAmbiente } from '../../../config/ambiente'
 import { HttpClient, HttpClientModule } from '@angular/common/http'
-import { FormatadoresService } from '../../../services/formatadores/formatadores.service'
 import { FormatInputDirective } from '../../../directives/format-input.directive'
 
 @Component({
@@ -12,7 +11,7 @@ import { FormatInputDirective } from '../../../directives/format-input.directive
   standalone: true,
   imports: [ModalComponent, FormsModule, HttpClientModule, FormatInputDirective],
   templateUrl: './inscricao-barcos.component.html',
-  styleUrl: './inscricao-barcos.component.css'
+  styleUrls: ['./inscricao-barcos.component.css']
 })
 export class InscricaoBarcosComponent {
 
@@ -43,10 +42,7 @@ export class InscricaoBarcosComponent {
   constructor(
     private http: HttpClient,
     private responseService: ModalResponseService,
-    public formatadores: FormatadoresService
-  ) {
-
-  }
+  ) {}
 
   @ViewChild('Modal') Modal!: ModalComponent
 
@@ -105,5 +101,23 @@ export class InscricaoBarcosComponent {
         console.error(error.error.message)
       }
     )
+  }
+
+  onBarcoAlugadoChange() {
+    if (this.barcoAlugado) {
+      this.nomeEmbarcacao = 'ALUGADO'
+      this.capitania = 'ALUGADO'
+    } else {
+      this.nomeEmbarcacao = ''
+      this.capitania = ''
+    }
+  }
+
+  onMotorizacaoAlugadaChange() {
+    if (this.motorizacaoAlugada) {
+      this.motorizacao = 'ALUGADO'
+    } else {
+      this.motorizacao = ''
+    }
   }
 }
