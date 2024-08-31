@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { FormatInputDirective } from '../../directives/format-input.directive'
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [FormatInputDirective],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
