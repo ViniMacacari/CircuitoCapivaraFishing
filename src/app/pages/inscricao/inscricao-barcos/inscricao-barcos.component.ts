@@ -94,7 +94,7 @@ export class InscricaoBarcosComponent {
 
     this.http.post(url, equipe).subscribe(
       response => {
-        this.Modal.openModal('#008000', 'Sucesso', 'Seu cadastro foi concluído com sucesso!', 'fa-check', true, 'Fechar', false, '', '', '')
+        this.Modal.openModal('#008000', 'Sucesso', 'Seu cadastro foi concluído com sucesso!', 'fa-check', true, 'Fechar', false, '/login', '', '')
       },
       error => {
         this.Modal.openModal('#FF0000', 'Erro', `Ocorreu um erro ao tentar realizar a inscrição: ${error.error.message}`, 'fa-times', true, 'Fechar', false, '', '', '')
