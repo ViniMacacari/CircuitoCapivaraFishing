@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-admin',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './admin.component.css'
 })
 export class AdminComponent {
+  constructor(
+    private router: Router
+  ) { }
 
+  navegar(url: string): void {
+    this.router.navigate([url])
+  }
 }

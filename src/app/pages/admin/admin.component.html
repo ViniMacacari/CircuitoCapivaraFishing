@@ -1,10 +1,10 @@
 <div class="d-flex align-items-center justify-content-center flex-column">
     <div class="d-flex align-items-center justify-content-center w-100 bg-black mb-3">
-        <h1 class="title-ccf">Admin</h1>
+        <h1 class="title-ccf white">Admin</h1>
     </div>
 
-    <p class="mb-3">Altere informações do funcionamento do sistema</p>
+    <p class="mb-3 text-center">Altere informações do funcionamento do sistema</p>
 
-    <button class="btn-ccf my-1">Gerenciar atendentes</button>
-    <button class="btn-ccf my-1">Gerenciar pagamentos</button>
+    <button class="btn-ccf my-1" (click)="navegar('/admin/gerenciar/avaliadores')">Gerenciar avaliadores</button>
+    <button class="btn-ccf my-1" (click)="navegar('/admin/gerenciar/pagamentos')">Gerenciar pagamentos</button>
 </div>
